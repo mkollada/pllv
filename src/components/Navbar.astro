@@ -1,0 +1,43 @@
+---
+const currentPath = Astro.url.pathname;
+---
+<nav class="w-full">
+    <div class="flex flex-col items-center justify-center py-8">
+        
+            <div class="flex justify-center w-full">
+                <a href="/" class="flex flex-col w-[50%] items-center">
+                    <div class="w-[20%]">
+                        <img src="/images/star-2@4x.png" class="mx-auto" />
+                    </div>                    
+                </a>
+            </div>
+            <div class="py-4 text-lg font-bold">
+                Porchlight from the Living Room
+            </div>
+        
+        <ul class="flex flex-row justify-between font-semibold text-xs font-sans mt-4 w-[25%] min-w-[300px]">
+            <!-- <li class="px-2"><a href="/" class={`hover:underline ${currentPath === '/' ?  'underline' : ''}`}>HOME</a></li> -->
+            <li class="px-2">
+                <a href="/" 
+                   class={`hover:underline whitespace-nowrap ${currentPath === '/' ?  'underline' : ''}`}
+                   style="font-size: clamp(0.65rem, 1vw, 0.75rem);">
+                   
+                </a>
+            </li>
+            <li class="px-2">
+                <a href="/about" 
+                   class={`hover:underline whitespace-nowrap ${currentPath === '/' ?  'underline' : ''}`}
+                   style="font-size: clamp(0.65rem, 1vw, 0.75rem);">
+                   MISSION
+                </a>
+            </li>
+            <li class="px-2">
+                <a href="/get-in-touch" 
+                   class={`hover:underline whitespace-nowrap ${currentPath === '/get-in-touch' ?  'underline' : ''}`}
+                   style="font-size: clamp(0.65rem, 1vw, 0.75rem);">
+                   
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,25 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+---
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>On Pacific Street</title>
+  </head>
+  <body>
+    <Navbar />
+    <div class="flex flex-col items-center pb-16">
+      <div class="flex flex-row justify-between w-full relative">   
+        <!-- Page Content -->
+        <div class="flex flex-col min-w-[200px] w-[60%] mx-auto relative">
+          <slot />
+        </div>
+        <!-- End Page Content -->
+      </div>
+      <img class="w-[10%] pt-16 pb-4" src="/images/house-music@4x.png" />
+    </div>
+  </body>
+</html>
+-
