@@ -21,21 +21,21 @@ const currentPath = Astro.url.pathname;
                 <a href="/" 
                    class={`hover:underline whitespace-nowrap ${currentPath === '/' ?  'underline' : ''}`}
                    style="font-size: clamp(0.65rem, 1vw, 0.75rem);">
-                   
+                   MISSION
                 </a>
             </li>
             <li class="px-2">
-                <a href="/" 
-                   class={`hover:underline whitespace-nowrap ${currentPath === '/' ?  'underline' : ''}`}
+                <a href="/about" 
+                   class={`hover:underline whitespace-nowrap ${currentPath === '/about' ?  'underline' : ''}`}
                    style="font-size: clamp(0.65rem, 1vw, 0.75rem);">
-                   MISSION
+                   ABOUT
                 </a>
             </li>
             <li class="px-2">
                 <a href="/get-in-touch" 
                    class={`hover:underline whitespace-nowrap ${currentPath === '/get-in-touch' ?  'underline' : ''}`}
                    style="font-size: clamp(0.65rem, 1vw, 0.75rem);">
-                   
+                   GET IN TOUCH
                 </a>
             </li>
         </ul>
