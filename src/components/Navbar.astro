@@ -6,25 +6,36 @@ const currentPath = Astro.url.pathname;
         
             <div class="flex justify-center w-full">
                 <a href="/" class="flex flex-col w-[50%] items-center">
-                    <div class="w-[20%]">
-                        <img src="/images/star-2@4x.png" class="mx-auto" />
+                    <div class="w-[50%]">
+                        <img src="/images/porchlight-presents.png" class="mx-auto" />
                     </div>                    
                 </a>
             </div>
-            <div class="py-4 text-lg font-bold">
-                Porchlight from the Living Room
+            <div class="flex justify-center w-full">
+                <a href="/" class="flex flex-col w-[50%] items-center">
+                    <div class="w-[50%]">
+                        <img src="/images/porch.png" class="mx-auto" />
+                    </div>                    
+                </a>
             </div>
         
         <ul class="flex flex-row justify-between font-semibold text-xs font-sans mt-4 w-[25%] min-w-[300px]">
-            <!-- <li class="px-2"><a href="/" class={`hover:underline ${currentPath === '/' ?  'underline' : ''}`}>HOME</a></li> -->
+            <li class="px-2"><a href="/" class={`hover:underline ${currentPath === '/' ?  'underline' : ''}`}>HOME</a></li>
+<li class="px-2">
+                <a href="/our-shows" 
+                   class={`hover:underline whitespace-nowrap ${currentPath === '/' ?  'underline' : ''}`}
+                   style="font-size: clamp(0.65rem, 1vw, 0.75rem);">
+                   OUR SHOWS
+                </a>
+            </li>
             <li class="px-2">
-                <a href="/" 
+                <a href="/mission" 
                    class={`hover:underline whitespace-nowrap ${currentPath === '/' ?  'underline' : ''}`}
                    style="font-size: clamp(0.65rem, 1vw, 0.75rem);">
                    MISSION
                 </a>
             </li>
-            <li class="px-2">
+            <!-- <li class="px-2">
                 <a href="/about" 
                    class={`hover:underline whitespace-nowrap ${currentPath === '/about' ?  'underline' : ''}`}
                    style="font-size: clamp(0.65rem, 1vw, 0.75rem);">
@@ -37,7 +48,7 @@ const currentPath = Astro.url.pathname;
                    style="font-size: clamp(0.65rem, 1vw, 0.75rem);">
                    GET IN TOUCH
                 </a>
-            </li>
+            </li> -->
         </ul>
     </div>
 </nav>

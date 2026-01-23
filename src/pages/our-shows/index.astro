@@ -1,0 +1,28 @@
+---
+import GlobalLayout from "../../layouts/GlobalLayout.astro"
+import text from "../../data/text/about.json"
+---
+<GlobalLayout>
+    <div class="font-sans pt-4 px-24 text-lg items-center">
+        <div class="flex flex-col items-center">
+            <div class="py-4 text-lg font-bold">
+                <p>Upcoming Shows</p>
+            </div>
+            <div class="py-4 text-md">
+                <p>1/31 Porchlight Presents live at Cassette</p>
+                <p>2/20 Porchlight Presents an Open Mic in the Living Room</p>
+            </div>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="py-4 text-lg font-bold">
+                <p>Past Shows</p>
+            </div>
+            <div class="flex flex-col py-4 text-md items-center">
+                <p>1/18 Porchlight Presents an Open Mic in the Living Room</p>
+                <div class="pt-4 w-[50%]">
+                    <img src="/images/on-pacific-st-room.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</GlobalLayout>
