@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets'
+import star2 from '../assets/star2.png'
+import porchBw from '../assets/porch-bw.png'
+import text from '../data/text/porchlight-is.json'
+---
+
+<div class="flex w-full max-w-full flex-col items-center justify-center px-4 md:px-0">
+  <div class="flex w-full max-w-full flex-col gap-4 px-4 md:gap-0">
+    <!-- Row 1: Star + Porch image -->
+    <div class="flex flex-row items-center justify-between gap-2 md:gap-0">
+      <div class="flex w-10 shrink-0 items-center justify-center md:w-[10%]">
+        <Image
+          src={star2}
+          alt="Star"
+          widths={[64, 96, 128]}
+          sizes="(max-width: 768px) 40px, 80px"
+          class="h-8 w-8 object-contain md:h-auto md:w-full"
+        />
+      </div>
+      <div class="min-w-0 flex-1 md:w-[75%] md:flex-none">
+        <Image
+          src={porchBw}
+          alt="Porch"
+          widths={[480, 768, 1024, 1440]}
+          sizes="(max-width: 768px) 80vw, 768px"
+          class="w-full object-contain"
+        />
+      </div>
+    </div>
+    <!-- Row 2: Content + Star -->
+    <div class="flex flex-row items-start justify-between gap-2 md:gap-0">
+      <div class="min-w-0 flex-1 md:w-[60%] md:flex-none">
+        <div class="w-full min-w-0 px-0 text-xs leading-relaxed md:text-base">
+          <p class="mb-2 font-semibold md:mb-4 md:text-[1.15em]">
+            {text.header}
+          </p>
+          <p class="">
+            {text.paragraph1}
+          </p>
+        </div>
+      </div>
+      <div class="flex w-10 shrink-0 items-center justify-center md:w-[10%]">
+        <Image
+          src={star2}
+          alt="Star"
+          widths={[64, 96, 128]}
+          sizes="(max-width: 768px) 40px, 80px"
+          class="h-8 w-8 object-contain md:h-auto md:w-full"
+        />
+      </div>
+    </div>
+  </div>
+</div>
