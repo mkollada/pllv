@@ -1,28 +1,35 @@
 ---
-import GlobalLayout from "../../layouts/GlobalLayout.astro"
-import text from "../../data/text/about.json"
+import GlobalLayout from '../../layouts/GlobalLayout.astro'
+import ShowPics from '../../components/ShowPics.astro'
 ---
+
 <GlobalLayout>
-    <div class="font-sans pt-4 px-24 text-lg items-center">
-        <div class="flex flex-col items-center">
-            <div class="py-4 text-lg font-bold">
-                <p>Upcoming Shows</p>
-            </div>
-            <div class="py-4 text-md">
-                <p>1/31 Porchlight Presents live at Cassette</p>
-                <p>2/20 Porchlight Presents an Open Mic in the Living Room</p>
-            </div>
-        </div>
-        <div class="flex flex-col items-center">
-            <div class="py-4 text-lg font-bold">
-                <p>Past Shows</p>
-            </div>
-            <div class="flex flex-col py-4 text-md items-center">
-                <p>1/18 Porchlight Presents an Open Mic in the Living Room</p>
-                <div class="pt-4 w-[50%]">
-                    <img src="/images/on-pacific-st-room.jpg">
-                </div>
-            </div>
-        </div>
+  <div class="font-sans px-4 pt-4 text-lg md:px-8">
+    <div class="flex flex-col items-center">
+      <h2 class="text-lg font-bold">Upcoming Shows</h2>
+      <div class="py-4 text-base md:py-4">
+        <ul class="list-disc pl-5">
+          <li>
+            1/31 Porchlight Presents live at Cassette:
+            <a
+              href="https://link.dice.fm/Cc05d626ace5"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline hover:text-blue-700">Tickets</a
+            >
+          </li>
+          <li>2/?? Porchlight Presents an Open Mic in the Living Room (More info soon)</li>
+        </ul>
+      </div>
     </div>
+    <div class="flex flex-col items-center">
+      <h2 class="py-4 text-lg font-bold">Archive</h2>
+      <div class="py-2 text-base md:py-4">
+        <p>DPSOR and OPS COME TOGETHER (ADD TEXT)</p>
+      </div>
+      <div class="w-full max-w-full pt-4">
+        <ShowPics />
+      </div>
+    </div>
+  </div>
 </GlobalLayout>

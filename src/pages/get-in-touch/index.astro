@@ -1,19 +1,21 @@
 ---
-import GlobalLayout from "../../layouts/GlobalLayout.astro";
+import GlobalLayout from '../../layouts/GlobalLayout.astro'
+import GetInTouch from '../../components/GetInTouch.astro'
+import nicole1 from '../../assets/event-pics/porchlight/01-18-26/nicole-above-bw-1.jpg'
+import { Image } from 'astro:assets'
 ---
 
 <GlobalLayout>
-    <div class="font-sans space-y-6 max-w-2xl mx-auto py-8">
-        <div>
-            <p class="text-xl font-bold">Love live music and intimate show? Email us:</p>
-        </div>
-        <div class="space-y-2">
-            <p>email: mattkollada@gmail.com</p>
-        </div>
-        <div class="flex flex-col items-center pt-16">
-            <div class="w-[75%]">
-                <img src="/images/on-pacific-st-room.jpg">
-            </div>
-        </div>
-    </div>
+  <div class="font-sans px-4 pt-4 text-lg md:px-8">
+    <GetInTouch />
+  </div>
+  <div class="flex flex-col items-center py-4">
+    <Image
+      src={nicole1}
+      alt="Luka Above"
+      class="w-full h-auto object-contain"
+      widths={[320, 480, 640, 768, 1024]}
+      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+    />
+  </div>
 </GlobalLayout>

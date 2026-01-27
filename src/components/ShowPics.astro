@@ -1,54 +1,51 @@
 ---
-import { Image } from 'astro:assets'
 import { galleryItems } from '../data/gallery'
 
 function shuffleWithVideoLimit<T extends { type: string }>(arr: T[]): T[] {
-  const images = arr.filter((item) => item.type !== 'video')
-  const videos = arr.filter((item) => item.type === 'video')
-
+  const images = arr.filter(item => item.type !== 'video');
+  const videos = arr.filter(item => item.type === 'video');
+  
   // Shuffle both arrays
   function shuffleArray<T>(array: T[]): T[] {
-    const a = [...array]
+    const a = [...array];
     for (let i = a.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1))
-      ;[a[i], a[j]] = [a[j], a[i]]
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
     }
-    return a
+    return a;
   }
 
-  const shuffledImages = shuffleArray(images)
-  const shuffledVideos = shuffleArray(videos)
+  const shuffledImages = shuffleArray(images);
+  const shuffledVideos = shuffleArray(videos);
 
-  const result: T[] = []
-  let imgIdx = 0,
-    vidIdx = 0,
-    consecutiveVideos = 0
+  const result: T[] = [];
+  let imgIdx = 0, vidIdx = 0, consecutiveVideos = 0;
 
   // Alternate filling, ensuring no more than two consecutive videos
   while (imgIdx < shuffledImages.length || vidIdx < shuffledVideos.length) {
     if (
-      vidIdx < shuffledVideos.length &&
-      consecutiveVideos < 2 &&
+      vidIdx < shuffledVideos.length && 
+      (consecutiveVideos < 2) && 
       (Math.random() < 0.5 || imgIdx >= shuffledImages.length)
     ) {
-      result.push(shuffledVideos[vidIdx++])
-      consecutiveVideos++
+      result.push(shuffledVideos[vidIdx++]);
+      consecutiveVideos++;
     } else if (imgIdx < shuffledImages.length) {
-      result.push(shuffledImages[imgIdx++])
-      consecutiveVideos = 0
+      result.push(shuffledImages[imgIdx++]);
+      consecutiveVideos = 0;
     } else if (vidIdx < shuffledVideos.length) {
       // Only videos left but make sure not to break consecutiveVideos rule
       if (consecutiveVideos < 2) {
-        result.push(shuffledVideos[vidIdx++])
-        consecutiveVideos++
+        result.push(shuffledVideos[vidIdx++]);
+        consecutiveVideos++;
       } else {
         // If only videos left and already 2 videos, insert an image if any left
         // but if not (should not happen), break infinite loop
-        break
+        break;
       }
     }
   }
-  return result
+  return result;
 }
 
 const shuffledItems = shuffleWithVideoLimit(galleryItems)
@@ -61,11 +58,11 @@ const shuffledItems = shuffleWithVideoLimit(galleryItems)
         <figure class="group mb-4 overflow-hidden break-inside-avoid" role="listitem">
           {item.type === 'image' ? (
             <div class="relative w-full overflow-hidden">
-              <Image
+              <img
                 src={item.src}
                 alt={item.alt}
-                widths={[320, 480, 640, 768, 1024]}
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                loading="lazy"
+                decoding="async"
                 class="w-full h-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
               />
             </div>
