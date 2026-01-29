@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css'
 import Navbar from '../components/Navbar.astro'
+import SocialIcons from '../components/SocialIcons.astro'
 ---
 
 <html>
@@ -12,11 +13,12 @@ import Navbar from '../components/Navbar.astro'
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta charset="utf-8" />
     <title>Porchlight Presents</title>
   </head>
   <body class="bg-warm-beige">
     <div
-      class="bg-warm-off-white mx-auto flex min-w-[200px] w-full flex-col items-center md:w-[60%] md:px-10 md:py-8"
+      class="relative bg-warm-off-white mx-auto flex min-w-[200px] w-full flex-col items-center md:w-[60%] md:px-10 md:py-8"
     >
       <Navbar />
       <div class="flex w-full max-w-full flex-col items-center pb-8 md:pb-16">
@@ -28,6 +30,8 @@ import Navbar from '../components/Navbar.astro'
           <!-- End Page Content -->
         </div>
       </div>
+      <!-- Top-right social/contact icons -->
+      <SocialIcons />
     </div>
   </body>
 </html>

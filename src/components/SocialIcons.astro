@@ -1,0 +1,23 @@
+---
+import instaIcon from '../assets/insta-icon.png'
+import mailIcon from '../assets/mail-icon.jpg'
+---
+
+<div class="flex flex-row items-center">
+  <a
+    href="https://www.instagram.com/porchlight.presents/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="block transition-opacity hover:opacity-80"
+    aria-label="Instagram"
+  >
+    <img src={instaIcon.src} alt="" class="h-5 w-5 md:h-6 md:w-6" width="24" height="24" />
+  </a>
+  <a
+    href="/get-in-touch"
+    class="block transition-opacity hover:opacity-80"
+    aria-label="Email / Get in touch"
+  >
+    <img src={mailIcon.src} alt="" class="h-5 w-5 md:h-6 md:w-6" width="24" height="24" />
+  </a>
+</div>

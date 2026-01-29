@@ -1,0 +1,28 @@
+---
+import text from '../data/text/archive.json'
+import ShowPics from './ShowPics.astro'
+---
+
+<div class="flex flex-col items-center">
+  <h2 class="text-md">{text.desc}</h2>
+  <p class="py-4">
+    <a
+      href="https://instagram.com/dpsor"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="underline text-blue-700 hover:text-blue-900">Dead Poets’ School of Rock</a
+    >: {text.dpsor}
+  </p>
+  <p class="py-4">
+    <a
+      href="https://onpacificstreet.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="underline text-blue-700 hover:text-blue-900">On Pacific Street</a
+    >: {text.ops}
+  </p>
+  <p class="py-4">Some photos and videos from those shows:</p>
+  <div class="w-full max-w-full pt-4">
+    <ShowPics />
+  </div>
+</div>
