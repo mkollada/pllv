@@ -1,14 +1,13 @@
 ---
 import text from '../data/text/porchlight-is.json'
 import BlackButton from './BlackButton.astro'
-import donate from '../assets/donate.svg?url'
 ---
 
 <div class="flex w-full max-w-full flex-col items-center gap-3 px-2 md:gap-4 md:px-0 md:py-0">
   <div class="flex flex-col">
-    <p class="max-w-full text-base leading-relaxed md:text-md">{text.paragraph2}</p>
-    <p class="max-w-full text-base leading-relaxed md:text-md pt-2">{text.paragraph3}</p>
-    <p class="max-w-full text-base leading-relaxed md:text-md pt-2">- Luka and Matt</p>
+    <p class="max-w-full leading-relaxed">{text.paragraph2}</p>
+    <p class="max-w-full leading-relaxed pt-2">{text.paragraph3}</p>
+    <p class="max-w-full leading-relaxed pt-2">- Luka and Matt</p>
   </div>
   <div class="flex flex-col items-center py-2">
     <BlackButton link="https://buy.stripe.com/cNi5kCcFtcAyfBy6JI8Zq00" text="Donate" />

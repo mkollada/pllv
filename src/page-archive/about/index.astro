@@ -1,0 +1,23 @@
+---
+import GlobalLayout from '../../layouts/GlobalLayout.astro'
+import text from '../../data/text/about.json'
+---
+
+<GlobalLayout>
+  <div class="font-sans pt-4 px-4 md:px-8">
+    <div class="flex flex-col items-center">
+      <div class="py-4 font-bold">
+        <p>About Us</p>
+      </div>
+    </div>
+
+    <div>
+      <p class="py-4">{text.text.paragraph1}</p>
+    </div>
+    <div class="flex flex-col items-center pt-16">
+      <div class="w-[75%]">
+        <img src="/images/on-pacific-st-room.jpg" />
+      </div>
+    </div>
+  </div>
+</GlobalLayout>
