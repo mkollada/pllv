@@ -1,11 +1,12 @@
 ---
 interface Props {
-  text: string
+  text?: string
   link?: string
   type?: 'button' | 'submit'
 }
 
 const { text, link, type = 'button' } = Astro.props
+const hasSlot = Astro.slots.has('default')
 ---
 
 <a href={link} target="_blank" rel="noopener noreferrer">
@@ -13,6 +14,6 @@ const { text, link, type = 'button' } = Astro.props
     class="min-h-[44px] min-w-[120px] touch-manipulation bg-black px-5 py-3 font-semibold text-white shadow-md transition-colors hover:bg-gray-600 focus:outline-none focus:ring-offset-2 active:bg-blue-800 md:min-h-0 md:py-2"
     type={type}
   >
-    {text}
+    {hasSlot ? <slot /> : text}
   </button>
 </a>

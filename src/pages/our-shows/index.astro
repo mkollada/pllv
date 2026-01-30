@@ -9,33 +9,50 @@ import Archive from '../../components/Archive.astro'
     <div class="flex flex-col items-center">
       <h2 class="text-lg font-bold">Upcoming Shows</h2>
       <div class="py-4 text-base md:py-4">
-        <ul class="list-disc pl-5">
+        <ul class="list-item pl-5 font-bold">
           <li>
-            1/31 Porchlight Presents live at Cassette:
+            - 1/31 Porchlight Presents live at Cassette:
             <a
               href="https://link.dice.fm/Cc05d626ace5"
               target="_blank"
               rel="noopener noreferrer"
               class="underline hover:text-blue-700">Tickets</a
             >
-            <div class="w-full max-w-full py-4">
+            <div class="w-full max-w-full flex justify-center items-center py-4">
               <img
                 src="https://pihovfuuvvf4hivn.public.blob.vercel-storage.com/jan31casetteposter.jpeg"
                 alt="Cassette Poster"
                 loading="lazy"
                 decoding="async"
-                class="w-full h-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+                class="max-h-200 object-contain transition-transform duration-200 group-hover:scale-[1.02]"
               />
             </div>
           </li>
-          <li>2/?? Porchlight Presents an Open Mic in the Living Room (More info soon)</li>
+          <li>
+            - 2/?? Porchlight Presents an Open Mic in the Living Room (More info soon <a
+              href="https://www.instagram.com/porchlight.presents/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline hover:text-blue-700">here</a
+            >)
+          </li>
         </ul>
-      </div>
-    </div>
-    <div class="flex flex-col items-center">
-      <h2 class="py-4 text-lg font-bold">Archive</h2>
-      <div class="py-2 text-base md:py-4">
-        <Archive />
+        <div class="flex flex-col items-center pt-8">
+          <p class="text-sm">
+            Wanna play a show with us? Have a space you think would be a great fit for one of our
+            shows? Send us an email at <a
+              href="mailto:porchlightpresents@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline hover:text-blue-700">porchlightpresents@gmail.com</a
+            > or message us on instagram <a
+              href="https://www.instagram.com/porchlight.presents/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline hover:text-blue-700">@porchlight.presents</a
+            >
+          </p>
+        </div>
       </div>
     </div>
   </div>

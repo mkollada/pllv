@@ -1,6 +1,10 @@
 ---
 import { Image } from 'astro:assets'
 import porchlightPresents from '../assets/porchlight-presents.png'
+import shows from '../assets/shows.svg?url'
+import supportUs from '../assets/support-us.svg?url'
+import archive from '../assets/archive.svg?url'
+import contact from '../assets/contact.svg?url'
 const currentPath = Astro.url.pathname
 ---
 
@@ -30,7 +34,13 @@ const currentPath = Astro.url.pathname
           href="/our-shows"
           class={`hover:underline active:opacity-80${currentPath === '/our-shows' ? ' underline' : ''}`}
         >
-          SHOWS
+          {
+            currentPath === '/our-shows' ? (
+              <img src={shows} alt="Shows" class="h-6 w-auto object-contain md:h-7" />
+            ) : (
+              'SHOWS'
+            )
+          }
         </a>
       </li>
       <li>
@@ -38,7 +48,13 @@ const currentPath = Astro.url.pathname
           href="/support-us"
           class={`hover:underline active:opacity-80${currentPath === '/support-us' ? ' underline' : ''}`}
         >
-          SUPPORT US
+          {
+            currentPath === '/support-us' ? (
+              <img src={supportUs} alt="Support Us" class="h-6 w-auto object-contain md:h-7" />
+            ) : (
+              'SUPPORT US'
+            )
+          }
         </a>
       </li>
       <li>
@@ -46,7 +62,13 @@ const currentPath = Astro.url.pathname
           href="/archive"
           class={`hover:underline active:opacity-80${currentPath === '/archive' ? ' underline' : ''}`}
         >
-          ARCHIVE
+          {
+            currentPath === '/archive' ? (
+              <img src={archive} alt="Archive" class="h-6 w-auto object-contain md:h-7" />
+            ) : (
+              'ARCHIVE'
+            )
+          }
         </a>
       </li>
       <li>
@@ -54,7 +76,13 @@ const currentPath = Astro.url.pathname
           href="/get-in-touch"
           class={`hover:underline active:opacity-80${currentPath === '/get-in-touch' ? ' underline' : ''}`}
         >
-          CONTACT
+          {
+            currentPath === '/get-in-touch' ? (
+              <img src={contact} alt="Contact" class="h-6 w-auto object-contain md:h-7" />
+            ) : (
+              'CONTACT'
+            )
+          }
         </a>
       </li>
     </ul>
