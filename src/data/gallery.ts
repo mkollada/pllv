@@ -106,6 +106,42 @@ export const galleryItems: GalleryItem[] = [
     type: 'image',
     image: { base: 'tallen-1', alt: 'Tallen performing' },
   },
+  {
+    type: 'image',
+    image: { base: 'jan31-cassette-alex', alt: 'Alex performing' },
+  },
+  {
+    type: 'image',
+    image: { base: 'jan31-cassette-betty', alt: 'Betty performing' },
+  },
+  {
+    type: 'image',
+    image: { base: 'jan31-cassette-leche', alt: 'Leche performing' },
+  },
+  {
+    type: 'image',
+    image: { base: 'jan31-cassette-hank', alt: 'Hank performing' },
+  },
+  {
+    type: 'image',
+    image: { base: 'jan31-cassette-pat', alt: 'Pat performing' },
+  },
+  {
+    type: 'image',
+    image: { base: 'jan31-cassette-jane', alt: 'Jane performing' },
+  },
+  {
+    type: 'image',
+    image: { base: 'jan31-cassette-sachi', alt: 'Sachi performing' },
+  },
+  {
+    type: 'image',
+    image: { base: 'jan31-cassette-leah-bassist', alt: '' },
+  },
+  {
+    type: 'image',
+    image: { base: 'jan31-cassette-sachi-drummer', alt: '' },
+  },
 ]
 
 // NOTE: Replace the image URLs below with your actual public internet URLs
