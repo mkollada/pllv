@@ -142,6 +142,26 @@ export const galleryItems: GalleryItem[] = [
     type: 'image',
     image: { base: 'jan31-cassette-sachi-drummer', alt: '' },
   },
+  {
+    type: 'image',
+    image: { base: 'mar7-coco', alt: 'Coco performing' },
+  },
+  {
+    type: 'image',
+    image: { base: 'mar7-taylor-guitar', alt: 'Taylor performing' },
+  },
+  {
+    type: 'image',
+    image: { base: 'mar7-taylor', alt: 'Taylor performing' },
+  },
+  {
+    type: 'image',
+    image: { base: 'mar7-jules', alt: 'Jules performing' },
+  },
+  {
+    type: 'image',
+    image: { base: 'mar7-crowd', alt: '' },
+  },
 ]
 
 // NOTE: Replace the image URLs below with your actual public internet URLs
